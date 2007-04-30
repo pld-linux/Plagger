@@ -19,6 +19,8 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_noautoreq	'perl(Plagger.*)'
+
 %description
 Plagger is a pluggable RSS/Atom feed aggregator and remixer platform.
 
@@ -26,10 +28,6 @@ Everything is implemented as a small plugin just like qpsmtpd, blosxom
 and perlbal. All you have to do is write a flow of aggregation,
 filters, syndication, publishing and notification plugins in config
 YAML file.
-
-See http://plagger.org/ for cookbook examples, quickstart document,
-development community (Mailing List and IRC), subversion repository
-and bug tracking.
 
 # %description -l pl.UTF-8
 # TODO
