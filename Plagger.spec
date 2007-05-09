@@ -4,7 +4,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	Plagger - Pluggable RSS/Atom Aggregator
-#Summary(pl.UTF-8):	
+Summary(pl.UTF-8):	Plagger - agregator RSS/Atom z obsługą wtyczek
 Name:		Plagger
 Version:	0.7.17
 Release:	1
@@ -29,8 +29,14 @@ and perlbal. All you have to do is write a flow of aggregation,
 filters, syndication, publishing and notification plugins in config
 YAML file.
 
-# %description -l pl.UTF-8
-# TODO
+%description -l pl.UTF-8
+Plagger to obsługująca wtyczki platforma agregatora i remiksera
+informacji w formacie RSS/Atom.
+
+Wszystko jest zaimplementowane jako małe wtyczki, jak qpsmtpd, blosxom
+i perlbal. Jedyne co trzeba zrobić to wpisanie wtyczek przepływu
+agregacji, filtrów, zespalania, publikowania i powiadamiania  w pliku
+konfiguracyjnym YAML.
 
 %prep
 %setup -q
@@ -60,6 +66,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS Changes
 %attr(755,root,root) %{_bindir}/*
 %{perl_vendorlib}/*.pm
-%{perl_vendorlib}/Plagger/
+%{perl_vendorlib}/Plagger
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
