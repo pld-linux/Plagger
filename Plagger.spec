@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 Summary:	Plagger - Pluggable RSS/Atom Aggregator
 Summary(pl.UTF-8):	Plagger - agregator RSS/Atom z obsługą wtyczek
 Name:		Plagger
